@@ -57,7 +57,7 @@ Am IsaacSim render of the default orchard is shown below.
 
 ## Assets
 
-Assets are not provided in this repository, due to licensing restrictions. The assets used here were exported from Blender - after opening the Blender version of the asset. This involved various maniputations to the blender file to make it generate USD palatable to ... USD consumers. Generally speaking, Blender assets have too much complex logic for USD - eliminating Ambient Occlusion and simplifying the usage of the alpha texture are needed. Also, Blender seems to be injecting a light source into each asset, which causes an epileptic fit in IsaacSim. These can be deleted in the asset USDA file, although presumably there is a setting in Blender to not do this.
+Assets are not provided in this repository, due to licensing restrictions. The assets used here were exported from Blender - after opening the Blender version of the asset. This involved various manipulations of the blender asset to make it generate USD palatable to ... USD consumers. Generally speaking, Blender assets have too much complex logic for USD - eliminating Ambient Occlusion and simplifying the usage of the alpha texture are needed. Also, Blender seems to be injecting a light source into each asset, which causes an epileptic fit in IsaacSim. These can be deleted in the asset USDA file, although presumably there is a setting in Blender to not do this.
 
 ## AI assistance
 
