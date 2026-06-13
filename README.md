@@ -1,7 +1,7 @@
 # Farm Generation
 
-Generate a small, configurable pecan orchard as a USDA layer for robotics
-simulation. The generated layer references the existing tree and ground-cover
+Generate a small, configurable pecan orchard as a USD(A) asset for robotics
+simulation. The generated USD(A) references existing tree and ground-cover
 assets rather than copying their geometry. Repeated vegetation references are
 marked instanceable so renderers can share their large source geometry.
 
@@ -36,9 +36,9 @@ The command accepts a YAML configuration file followed by the output filename.
 All supported settings and defaults are shown in `orchard_config.yaml`.
 `random_seed` is optional; omit it for different random transforms each run.
 
-The output layer stores references relative to its own location. Keep the
+The output stores references relative to its own location. Keep the
 `assets` directory and its texture subdirectories available at those relative
-paths when moving or packaging the generated layer.
+paths when moving or packaging the generated output.
 
 ## Tests
 
