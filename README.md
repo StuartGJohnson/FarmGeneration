@@ -70,7 +70,7 @@ python -m unittest discover -s tests
 
 ## Generation
 
-Am IsaacSim render of the default orchard is shown below. 
+An IsaacSim render of the default orchard is shown below. 
 
 ![TestOrchard](orchard_world.png)
 
