@@ -1,0 +1,2770 @@
+#usda 1.0
+(
+    defaultPrim = "World"
+    metersPerUnit = 1
+    upAxis = "Z"
+)
+
+def Xform "World"
+{
+    def Scope "Trees"
+    {
+        def Xform "Tree_r000_c000" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/BL04_CaryaIllinoensis_CYCLES/BCY_BL04_CaryaIllinoensis_1.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 303.99185
+            float3 xformOp:scale = (2.1515908, 2.1515908, 2.1515908)
+            double3 xformOp:translate = (0, 0, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Tree_r000_c001" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/BL04_CaryaIllinoensis_CYCLES/BCY_BL04_CaryaIllinoensis_1.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 151.40576
+            float3 xformOp:scale = (2.0517833, 2.0517833, 2.0517833)
+            double3 xformOp:translate = (0, 3, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Tree_r001_c000" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/BL04_CaryaIllinoensis_CYCLES/BCY_BL04_CaryaIllinoensis_1.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 184.0589
+            float3 xformOp:scale = (2.0809867, 2.0809867, 2.0809867)
+            double3 xformOp:translate = (4, 0, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Tree_r001_c001" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/BL04_CaryaIllinoensis_CYCLES/BCY_BL04_CaryaIllinoensis_1.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 282.16748
+            float3 xformOp:scale = (2.0606625, 2.0606625, 2.0606625)
+            double3 xformOp:translate = (4, 3, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+    }
+
+    def Scope "GroundCover"
+    {
+        def Xform "Patch_00000" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 270
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (-3.5, -3.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00001" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 90
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (-3.5, -2.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00002" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 180
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (-3.5, -1.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00003" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 0
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (-3.5, -0.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00004" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 180
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (-3.5, 0.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00005" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 90
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (-3.5, 1.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00006" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 0
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (-3.5, 2.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00007" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 180
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (-3.5, 3.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00008" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 0
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (-3.5, 4.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00009" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 180
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (-3.5, 5.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00010" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 90
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (-3.5, 6.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00011" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 270
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (-2.5, -3.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00012" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 180
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (-2.5, -2.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00013" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 0
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (-2.5, -1.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00014" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 270
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (-2.5, -0.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00015" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 0
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (-2.5, 0.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00016" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 180
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (-2.5, 1.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00017" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 180
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (-2.5, 2.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00018" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 0
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (-2.5, 3.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00019" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 90
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (-2.5, 4.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00020" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 90
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (-2.5, 5.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00021" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 270
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (-2.5, 6.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00022" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 180
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (-1.5, -3.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00023" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 270
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (-1.5, -2.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00024" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 180
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (-1.5, -1.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00025" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 180
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (-1.5, -0.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00026" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 90
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (-1.5, 0.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00027" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 180
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (-1.5, 1.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00028" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 270
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (-1.5, 2.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00029" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 90
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (-1.5, 3.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00030" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 90
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (-1.5, 4.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00031" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 0
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (-1.5, 5.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00032" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 180
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (-1.5, 6.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00033" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 0
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (-0.5, -3.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00034" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 90
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (-0.5, -2.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00035" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 0
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (-0.5, -1.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00036" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 270
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (-0.5, -0.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00037" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 180
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (-0.5, 0.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00038" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 90
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (-0.5, 1.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00039" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 270
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (-0.5, 2.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00040" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 270
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (-0.5, 3.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00041" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 180
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (-0.5, 4.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00042" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 0
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (-0.5, 5.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00043" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 180
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (-0.5, 6.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00044" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 90
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (0.5, -3.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00045" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 180
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (0.5, -2.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00046" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 90
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (0.5, -1.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00047" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 90
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (0.5, -0.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00048" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 0
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (0.5, 0.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00049" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 90
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (0.5, 1.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00050" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 90
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (0.5, 2.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00051" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 0
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (0.5, 3.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00052" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 90
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (0.5, 4.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00053" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 0
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (0.5, 5.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00054" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 180
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (0.5, 6.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00055" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 0
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (1.5, -3.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00056" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 0
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (1.5, -2.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00057" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 90
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (1.5, -1.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00058" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 270
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (1.5, -0.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00059" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 0
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (1.5, 0.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00060" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 0
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (1.5, 1.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00061" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 0
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (1.5, 2.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00062" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 0
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (1.5, 3.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00063" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 180
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (1.5, 4.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00064" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 90
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (1.5, 5.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00065" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 270
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (1.5, 6.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00066" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 0
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (2.5, -3.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00067" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 270
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (2.5, -2.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00068" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 180
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (2.5, -1.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00069" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 270
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (2.5, -0.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00070" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 90
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (2.5, 0.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00071" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 90
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (2.5, 1.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00072" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 0
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (2.5, 2.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00073" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 90
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (2.5, 3.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00074" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 180
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (2.5, 4.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00075" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 0
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (2.5, 5.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00076" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 270
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (2.5, 6.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00077" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 0
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (3.5, -3.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00078" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 270
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (3.5, -2.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00079" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 180
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (3.5, -1.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00080" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 270
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (3.5, -0.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00081" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 180
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (3.5, 0.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00082" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 0
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (3.5, 1.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00083" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 0
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (3.5, 2.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00084" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 0
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (3.5, 3.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00085" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 90
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (3.5, 4.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00086" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 270
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (3.5, 5.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00087" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 180
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (3.5, 6.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00088" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 90
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (4.5, -3.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00089" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 270
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (4.5, -2.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00090" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 0
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (4.5, -1.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00091" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 90
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (4.5, -0.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00092" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 90
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (4.5, 0.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00093" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 270
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (4.5, 1.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00094" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 270
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (4.5, 2.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00095" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 270
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (4.5, 3.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00096" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 0
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (4.5, 4.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00097" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 0
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (4.5, 5.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00098" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 90
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (4.5, 6.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00099" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 270
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (5.5, -3.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00100" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 0
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (5.5, -2.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00101" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 270
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (5.5, -1.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00102" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 270
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (5.5, -0.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00103" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 270
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (5.5, 0.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00104" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 0
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (5.5, 1.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00105" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 90
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (5.5, 2.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00106" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 270
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (5.5, 3.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00107" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 270
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (5.5, 4.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00108" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 90
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (5.5, 5.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00109" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 0
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (5.5, 6.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00110" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 0
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (6.5, -3.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00111" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 90
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (6.5, -2.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00112" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 180
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (6.5, -1.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00113" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 90
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (6.5, -0.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00114" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 270
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (6.5, 0.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00115" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 0
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (6.5, 1.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00116" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 270
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (6.5, 2.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00117" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 0
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (6.5, 3.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00118" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 90
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (6.5, 4.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00119" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 180
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (6.5, 5.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00120" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 90
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (6.5, 6.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00121" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 0
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (7.5, -3.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00122" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 90
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (7.5, -2.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00123" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 180
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (7.5, -1.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00124" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 0
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (7.5, -0.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00125" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 270
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (7.5, 0.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00126" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 270
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (7.5, 1.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00127" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 180
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (7.5, 2.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00128" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 90
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (7.5, 3.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00129" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 180
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (7.5, 4.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00130" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 90
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (7.5, 5.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+
+        def Xform "Patch_00131" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+            instanceable = true
+            prepend references = @assets/ground_cover/meadowPatch_poppy.usda@
+        )
+        {
+            bool physics:collisionEnabled = 0
+            token visibility = "inherited"
+            float xformOp:rotateZ = 180
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (7.5, 6.5, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateZ", "xformOp:scale"]
+
+            over "env_light" (
+                active = false
+            )
+            {
+            }
+        }
+    }
+
+    def Scope "Lights"
+    {
+        def DistantLight "Sun" (
+            prepend apiSchemas = ["ShadowAPI"]
+        )
+        {
+            float inputs:angle = 0.53
+            color3f inputs:color = (1, 0.95, 0.85)
+            float inputs:intensity = 1000
+            bool inputs:shadow:enable = 1
+            float3 xformOp:rotateXYZ = (35, -25, 0)
+            uniform token[] xformOpOrder = ["xformOp:rotateXYZ"]
+        }
+
+        def DomeLight "Sky"
+        {
+            color3f inputs:color = (0.75, 0.85, 1)
+            float inputs:intensity = 50
+        }
+    }
+
+    def Mesh "GroundPlane" (
+        prepend apiSchemas = ["PhysicsCollisionAPI"]
+    )
+    {
+        float3[] extent = [(-4, -4, 0), (8, 7, 0)]
+        int[] faceVertexCounts = [4]
+        int[] faceVertexIndices = [0, 1, 2, 3]
+        bool physics:collisionEnabled = 1
+        point3f[] points = [(-4, -4, 0), (8, -4, 0), (8, 7, 0), (-4, 7, 0)]
+        uniform token subdivisionScheme = "none"
+        token visibility = "invisible"
+    }
+}
+

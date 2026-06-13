@@ -1,0 +1,53 @@
+There are assets for a pecan tree and ground cover, in usda (USD ascii) file format in:
+
+assets/BL04_CaryaIllinoensis_CYCLES/BCY_BL04_CaryaIllinoensis_1.usda (pecan tree (young))
+
+and
+
+assets/ground_cover/meadowPatch_poppy.usda
+
+Note these assets implicitly use their own textures/ subdirectory.
+
+We need to generate a small orchard of pecan trees/weeds in USDA file format by using the USD python library (installed in the current conda env "usd" - which is activated) and using the nvidia usd package which requires the env.sh file to be sourced (it has been in this shell).
+
+We should do this by scaling and placing these pecan and ground cover assets in a usda file called orchard_world.usda. This usda file will contain references to the assets above. orchard_world.usda will eventually be used as an asset for robotic tractor development in isaacsim.
+
+The arguments for generation of orchard_world.usda are below. For now we will generate a orchard of n_rows rows with n_cols trees in each row. Later we will make this more interesting. Arguments to our generator are:
+
+n_rows (default 2)
+n_cols (default 2)
+tree_scaling_min (default 0.8)
+tree_scaling_max (default 1.2)
+ground_cover_scaling_min (default 1.0)
+ground_cover_scaling_max (default 1.0)
+ground_extent (meters) (default 2)
+row_spacing (meters) (default 4)
+col_spacing (meters) (default 3)
+
+Note the ground cover assets come in 1m x 1m patches - they should cover a ground plane which extends between all the trees and also out to an extent ground_extent meters beyond where the tree assets are placed. Note all assets should be uniformly-randomly scaled by the associated scaling, and also rotated randomly about the z (up) axis. Note that the ground cover assets should be rotated in random increments of 90 degress (they are square).
+
+The assets should have visual, rigid body and collider settings as follows:
+
+GroundPlane:
+visual off
+collider on
+rigid_body off/static
+
+ground cover:
+visual on
+collider off
+rigid_body off
+
+trees:
+visual on
+collider off
+rigid_body off
+
+For now, lets apply these settings exterior to the assets themselves, i.e. in orchard_world.usda file.
+
+Code-wise, let's set this up as a typical python package. We will need a python executables which accept the filename of a yaml file containing the above settings, and the output file name. There may be some sort of issue with bundling assets during usda generation by the python tools. If so, let me know.
+
+There should also be a unit (really functional) tests/ dir which uses python unittest to generate the standard defaulkt orchard. The test simply needs to run. I will be viewing the usda file in usdview to confirm proper function. I will also be exectuting the test in pycharm.
+
+In coding, try to use type hints. Also, write a README.md which shows typical install and usage sections. We will iterate on these.
+
