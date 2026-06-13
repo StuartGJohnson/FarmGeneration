@@ -33,8 +33,27 @@ generate-orchard orchard_config.yaml orchard_world.usda
 ```
 
 The command accepts a YAML configuration file followed by the output filename.
-All supported settings and defaults are shown in `orchard_config.yaml`.
-`random_seed` is optional; omit it for different random transforms each run.
+The supported parameters and authoritative defaults are defined by
+[`OrchardConfig`](src/orchard_generator/config.py). `orchard_config.yaml`
+provides an example configuration.
+
+| Parameter | Default | Description |
+| --- | ---: | --- |
+| `n_rows` | `2` | Number of tree rows. Rows are spaced along the X axis. |
+| `n_cols` | `2` | Number of trees in each row. Columns are spaced along the Y axis. |
+| `tree_scaling_min` | `2.0` | Minimum uniform random scale applied to each tree. |
+| `tree_scaling_max` | `2.2` | Maximum uniform random scale applied to each tree. |
+| `ground_cover_scaling_min` | `1.0` | Minimum uniform random scale applied to each ground-cover patch. |
+| `ground_cover_scaling_max` | `1.0` | Maximum uniform random scale applied to each ground-cover patch. |
+| `ground_extent` | `4.0` | Ground-cover and collision-plane extent, in meters, beyond the outermost tree positions. |
+| `row_spacing` | `4.0` | Distance between tree rows, in meters. |
+| `col_spacing` | `3.0` | Distance between trees within each row, in meters. |
+| `random_seed` | `null` | Optional random seed for repeatable scales and rotations. Omit it or use `null` for different transforms each run. |
+
+Tree rotations are selected randomly about the Z axis. Ground-cover rotations
+are selected randomly in 90-degree increments. Minimum scaling values must be
+greater than zero, maximum scaling values must not be below their corresponding
+minimums, and spacing values must be greater than zero.
 
 The output stores references relative to its own location. Keep the
 `assets` directory and its texture subdirectories available at those relative
