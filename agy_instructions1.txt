@@ -1,0 +1,7 @@
+The current directory contains python code for procedural generation of a pecan orchard destined for nvidia isaacsim. This is working code which uses pecan and weed assets (in the assets directory) to generate the orchard (for simulation in isaacsim). Note the current shell has access to the pxr usd library (via the conda env called usd). Also, executing env.sh adds the nvidia version of the usd library to the pythonpath. This has already been done in this shell.
+
+I wish to experiment with purely procedural generation of a young (3-year) pecan tree in usd (via the usd library). This code will 1) use the L-system model of tree structure to represent the tree (unless you have a better idea), 2) generate leaf and bark textures from scratch - note these textures (for pecan) are probably best represented as a leaf atlas (for the odd-pinnately compound pecan leaves) with appropriate alpha mask 3) output the tree asset to a USDA (not USD) file for viewing in usdview.
+
+Our dev code should run from a unit test (but only as a thin wrapper of package code in the src dir) in tests and generate test output to the test_output directory. Try not to change any existing code. I will be running the code from pycharm. You do not need to edit the README.md file yet.
+Use unittest to define the tests which run the components of this work. Say use a new file called tests/test_generate_tree.py.
+

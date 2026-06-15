@@ -20,8 +20,8 @@ class OrchardConfig:
     ground_cover_scaling_min: float = 1.0
     ground_cover_scaling_max: float = 1.0
     ground_extent: float = 4.0
-    row_spacing: float = 4.0
-    col_spacing: float = 3.0
+    row_spacing: float = 5.0
+    col_spacing: float = 4.0
     random_seed: int | None = None
 
     def validate(self) -> None:

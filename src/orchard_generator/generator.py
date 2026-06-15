@@ -6,8 +6,9 @@ import math
 import os
 import random
 from pathlib import Path
+from typing import Sequence
 
-from pxr import Gf, Sdf, Usd, UsdGeom, UsdLux, UsdPhysics
+from pxr import Gf, Usd, UsdGeom, UsdLux, UsdPhysics
 
 from orchard_generator.config import OrchardConfig
 
@@ -19,10 +20,44 @@ TREE_ASSET = (
     / "BCY_BL04_CaryaIllinoensis_1.usda"
 )
 GROUND_COVER_ASSET = PROJECT_ROOT / "assets" / "ground_cover" / "meadowPatch_poppy.usda"
+USD_ASSET_EXTENSIONS = {".usd", ".usda", ".usdc"}
+IGNORED_ASSET_DIR_NAMES = {"__pycache__", "temp", "tmp"}
 
 
 def _reference_path(asset_path: Path, output_path: Path) -> str:
     return Path(os.path.relpath(asset_path, output_path.parent)).as_posix()
+
+
+def discover_usd_assets(source: Path) -> list[Path]:
+    """Return USD asset files from a file or recursively searched directory."""
+    source = source.expanduser().resolve()
+    if source.is_file():
+        if source.suffix.lower() not in USD_ASSET_EXTENSIONS:
+            raise ValueError(f"tree asset file must be a USD file: {source}")
+        return [source]
+    if not source.is_dir():
+        raise FileNotFoundError(f"tree asset source not found: {source}")
+
+    assets = []
+    for path in source.rglob("*"):
+        relative_parts = path.relative_to(source).parts[:-1]
+        if any(part.startswith(".") or part in IGNORED_ASSET_DIR_NAMES for part in relative_parts):
+            continue
+        if path.is_file() and path.suffix.lower() in USD_ASSET_EXTENSIONS:
+            assets.append(path)
+    assets.sort()
+    if not assets:
+        raise FileNotFoundError(f"no USD tree assets found under: {source}")
+    return assets
+
+
+def _choose_reference(
+    rng: random.Random,
+    references: Sequence[str],
+) -> str:
+    if len(references) == 1:
+        return references[0]
+    return rng.choice(references)
 
 
 def _set_instance_properties(
@@ -111,9 +146,10 @@ def generate_orchard(
     output_path = output_path.expanduser().resolve()
     output_path.parent.mkdir(parents=True, exist_ok=True)
 
-    for asset_path in (tree_asset, ground_cover_asset):
-        if not asset_path.is_file():
-            raise FileNotFoundError(f"USD asset not found: {asset_path}")
+    tree_assets = discover_usd_assets(tree_asset)
+    ground_cover_asset = ground_cover_asset.expanduser().resolve()
+    if not ground_cover_asset.is_file():
+        raise FileNotFoundError(f"USD ground-cover asset not found: {ground_cover_asset}")
 
     stage = Usd.Stage.CreateNew(str(output_path))
     UsdGeom.SetStageUpAxis(stage, UsdGeom.Tokens.z)
@@ -135,7 +171,7 @@ def generate_orchard(
     _define_ground_plane(stage, min_x, max_x, min_y, max_y)
 
     rng = random.Random(config.random_seed)
-    tree_reference = _reference_path(tree_asset.resolve(), output_path)
+    tree_references = [_reference_path(asset, output_path) for asset in tree_assets]
     cover_reference = _reference_path(ground_cover_asset.resolve(), output_path)
 
     for row in range(config.n_rows):
@@ -146,7 +182,7 @@ def generate_orchard(
             _set_instance_properties(
                 stage,
                 tree_prim,
-                tree_reference,
+                _choose_reference(rng, tree_references),
                 (row * config.row_spacing, col * config.col_spacing, 0.0),
                 rng.uniform(0.0, 360.0),
                 rng.uniform(config.tree_scaling_min, config.tree_scaling_max),

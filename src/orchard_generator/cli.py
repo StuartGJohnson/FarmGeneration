@@ -12,6 +12,12 @@ from orchard_generator.generator import generate_orchard
 
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description="Generate a USD orchard world")
+    parser.add_argument(
+        "--tree-source",
+        type=Path,
+        default=None,
+        help="tree USDA file or directory recursively searched for USD tree assets",
+    )
     parser.add_argument("config", type=Path, help="YAML orchard configuration file")
     parser.add_argument("output", type=Path, help="output .usda file")
     return parser
@@ -19,7 +25,10 @@ def build_parser() -> argparse.ArgumentParser:
 
 def main(argv: Sequence[str] | None = None) -> int:
     args = build_parser().parse_args(argv)
-    output_path = generate_orchard(load_config(args.config), args.output)
+    kwargs = {}
+    if args.tree_source is not None:
+        kwargs["tree_asset"] = args.tree_source
+    output_path = generate_orchard(load_config(args.config), args.output, **kwargs)
     print(f"Generated {output_path}")
     return 0
 

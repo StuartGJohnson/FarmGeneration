@@ -1,10 +1,10 @@
 n_rows: 2
 n_cols: 2
-tree_scaling_min: 2.0
-tree_scaling_max: 2.2
+tree_scaling_min: 0.8
+tree_scaling_max: 1.1
 ground_cover_scaling_min: 1.0
 ground_cover_scaling_max: 1.0
 ground_extent: 4.0
-row_spacing: 4.0
-col_spacing: 3.0
+row_spacing: 5.0
+col_spacing: 4.0
 random_seed: 0
