@@ -130,7 +130,7 @@ def _define_sun_light(stage: Usd.Stage) -> None:
 def _define_sky_light(stage: Usd.Stage) -> None:
     """Create a diffuse daytime sky light."""
     sky = UsdLux.DomeLight.Define(stage, "/World/Lights/Sky")
-    sky.CreateIntensityAttr(50.0)
+    sky.CreateIntensityAttr(500.0)
     sky.CreateColorAttr(Gf.Vec3f(0.75, 0.85, 1.0))
 
 

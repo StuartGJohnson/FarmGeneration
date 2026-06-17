@@ -38,16 +38,18 @@ Generate an orchard using tree assets discovered from a directory:
 source env.sh
 generate-orchard \
   --tree-source test_output/pecan_trees \
+  --ground-cover-source assets/ground_cover/meadowPatch_poppy.usda \
   orchard_config.yaml \
   test_output/orchard_generated_trees_world.usda
 ```
 
-The command accepts a YAML configuration file followed by the output filename. By detault (this will change), it uses possibly licensed (see below) asssets in the `assets` directory. 
+The command accepts a YAML configuration file followed by the output filename. By default (this will change), it uses possibly licensed (see below) asssets in the `assets` directory. 
 `--tree-source` may point to a single USD tree file or to a directory. Directory sources are searched
 recursively for `.usd`, `.usda`, and `.usdc` files, excluding hidden directories
 and common scratch directories such as `temp` and `tmp`. When multiple tree
 assets are found, each tree placement randomly chooses one source asset while
 remaining instanceable.
+`--ground-cover-source` may point to a single USD ground-cover file.
 
 The supported parameters and authoritative defaults are defined by
 [`OrchardConfig`](src/orchard_generator/config.py). `orchard_config.yaml`

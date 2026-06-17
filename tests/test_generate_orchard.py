@@ -7,7 +7,7 @@ from pxr import Usd, UsdGeom, UsdLux, UsdPhysics
 
 from orchard_generator.cli import main as orchard_cli
 from orchard_generator import OrchardConfig, generate_orchard
-from orchard_generator.generator import discover_usd_assets
+from orchard_generator.generator import GROUND_COVER_ASSET, discover_usd_assets
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 TEST_OUTPUT = PROJECT_ROOT / "test_output" / "orchard_world.usda"
@@ -68,6 +68,8 @@ class GenerateOrchardTest(unittest.TestCase):
                 [
                     "--tree-source",
                     str(GENERATED_TREE_SOURCE),
+                    "--ground-cover-source",
+                    str(GROUND_COVER_ASSET),
                     str(PROJECT_ROOT / "orchard_config.yaml"),
                     str(GENERATED_TREE_TEST_OUTPUT),
                 ]
