@@ -57,7 +57,7 @@ class GenerateOrchardTest(unittest.TestCase):
             UsdLux.ShadowAPI(sun.GetPrim()).GetShadowEnableAttr().Get()
         )
         sky = UsdLux.DomeLight(stage.GetPrimAtPath("/World/Lights/Sky"))
-        self.assertEqual(sky.GetIntensityAttr().Get(), 50.0)
+        self.assertEqual(sky.GetIntensityAttr().Get(), 500.0)
 
     def test_cli_generates_orchard_with_generated_tree_assets(self) -> None:
         discovered_tree_assets = discover_usd_assets(GENERATED_TREE_SOURCE)

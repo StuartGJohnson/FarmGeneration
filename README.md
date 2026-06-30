@@ -11,15 +11,18 @@ Environment lights embedded in referenced assets are removed before use (see the
 
 ## Install
 
-Use the provided environment setup so Python can find NVIDIA USD, then install
-the package in editable mode:
+This repo (specifically, `env.sh`) assumes the Nvidia USD python package is installed at `~/nv_usd`. There are other ways to install the USD python package. Use the provided environment setup so Python can find NVIDIA USD, then install the package in editable mode:
 
 ```bash
 source env.sh
 python -m pip install -e .
 ```
 
+It can be helpful/faster to install via `python -m pip install -e . --no-deps --no-build-isolation` if you have the dependencies already installed.
+
 The active Python environment must provide `pxr` (USD) and PyYAML.
+
+This repo has been tested with USD version 25.08, using Python 3.12, and IsaacSim version 6.0.1.
 
 ## Usage
 

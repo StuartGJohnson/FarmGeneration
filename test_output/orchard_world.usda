@@ -3230,7 +3230,7 @@ def Xform "World"
         def DomeLight "Sky"
         {
             color3f inputs:color = (0.75, 0.85, 1)
-            float inputs:intensity = 50
+            float inputs:intensity = 500
         }
     }
 
