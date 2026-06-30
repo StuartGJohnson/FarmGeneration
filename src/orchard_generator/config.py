@@ -22,6 +22,7 @@ class OrchardConfig:
     ground_extent: float = 4.0
     row_spacing: float = 5.0
     col_spacing: float = 4.0
+    sky_intensity: float = 500.0
     random_seed: int | None = None
 
     def validate(self) -> None:
@@ -40,6 +41,8 @@ class OrchardConfig:
             raise ValueError("ground_extent must be non-negative")
         if self.row_spacing <= 0 or self.col_spacing <= 0:
             raise ValueError("row_spacing and col_spacing must be greater than 0")
+        if self.sky_intensity < 0:
+            raise ValueError("sky_intensity must be non-negative")
 
     @classmethod
     def from_mapping(cls, values: Mapping[str, Any]) -> "OrchardConfig":

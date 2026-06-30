@@ -3229,8 +3229,9 @@ def Xform "World"
 
         def DomeLight "Sky"
         {
-            color3f inputs:color = (0.75, 0.85, 1)
-            float inputs:intensity = 50
+            float inputs:intensity = 500
+            asset inputs:texture:file = @../assets/dome_texture_no_clouds.png@
+            token inputs:texture:format = "latlong"
         }
     }
 

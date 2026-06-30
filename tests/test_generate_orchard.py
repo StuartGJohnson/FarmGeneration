@@ -7,7 +7,11 @@ from pxr import Usd, UsdGeom, UsdLux, UsdPhysics
 
 from orchard_generator.cli import main as orchard_cli
 from orchard_generator import OrchardConfig, generate_orchard
-from orchard_generator.generator import GROUND_COVER_ASSET, discover_usd_assets
+from orchard_generator.generator import (
+    GROUND_COVER_ASSET,
+    SKY_TEXTURE_ASSET,
+    discover_usd_assets,
+)
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 TEST_OUTPUT = PROJECT_ROOT / "test_output" / "orchard_world.usda"
@@ -19,7 +23,11 @@ GENERATED_TREE_TEST_OUTPUT = (
 
 class GenerateOrchardTest(unittest.TestCase):
     def test_generates_default_orchard(self) -> None:
-        generate_orchard(OrchardConfig(random_seed=0), TEST_OUTPUT)
+        generate_orchard(
+            OrchardConfig(random_seed=0),
+            TEST_OUTPUT,
+            sky_texture_asset=SKY_TEXTURE_ASSET,
+        )
 
         stage = Usd.Stage.Open(str(TEST_OUTPUT), load=Usd.Stage.LoadNone)
         self.assertTrue(stage)
@@ -57,6 +65,11 @@ class GenerateOrchardTest(unittest.TestCase):
             UsdLux.ShadowAPI(sun.GetPrim()).GetShadowEnableAttr().Get()
         )
         sky = UsdLux.DomeLight(stage.GetPrimAtPath("/World/Lights/Sky"))
+        self.assertEqual(
+            sky.GetTextureFileAttr().Get().path,
+            "../assets/dome_texture_no_clouds.png",
+        )
+        self.assertEqual(sky.GetTextureFormatAttr().Get(), UsdLux.Tokens.latlong)
         self.assertEqual(sky.GetIntensityAttr().Get(), 500.0)
 
     def test_cli_generates_orchard_with_generated_tree_assets(self) -> None:
@@ -70,6 +83,8 @@ class GenerateOrchardTest(unittest.TestCase):
                     str(GENERATED_TREE_SOURCE),
                     "--ground-cover-source",
                     str(GROUND_COVER_ASSET),
+                    "--sky-texture-source",
+                    str(SKY_TEXTURE_ASSET),
                     str(PROJECT_ROOT / "orchard_config.yaml"),
                     str(GENERATED_TREE_TEST_OUTPUT),
                 ]

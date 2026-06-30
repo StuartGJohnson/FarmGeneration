@@ -7,4 +7,5 @@ ground_cover_scaling_max: 1.0
 ground_extent: 4.0
 row_spacing: 5.0
 col_spacing: 4.0
+sky_intensity: 500.0
 random_seed: 0

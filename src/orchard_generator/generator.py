@@ -8,7 +8,7 @@ import random
 from pathlib import Path
 from typing import Sequence
 
-from pxr import Gf, Usd, UsdGeom, UsdLux, UsdPhysics
+from pxr import Gf, Sdf, Usd, UsdGeom, UsdLux, UsdPhysics
 
 from orchard_generator.config import OrchardConfig
 
@@ -20,6 +20,7 @@ TREE_ASSET = (
     / "BCY_BL04_CaryaIllinoensis_1.usda"
 )
 GROUND_COVER_ASSET = PROJECT_ROOT / "assets" / "ground_cover" / "meadowPatch_poppy.usda"
+SKY_TEXTURE_ASSET = PROJECT_ROOT / "assets" / "dome_texture_no_clouds.png"
 USD_ASSET_EXTENSIONS = {".usd", ".usda", ".usdc"}
 IGNORED_ASSET_DIR_NAMES = {"__pycache__", "temp", "tmp"}
 
@@ -41,7 +42,10 @@ def discover_usd_assets(source: Path) -> list[Path]:
     assets = []
     for path in source.rglob("*"):
         relative_parts = path.relative_to(source).parts[:-1]
-        if any(part.startswith(".") or part in IGNORED_ASSET_DIR_NAMES for part in relative_parts):
+        if any(
+            part.startswith(".") or part in IGNORED_ASSET_DIR_NAMES
+            for part in relative_parts
+        ):
             continue
         if path.is_file() and path.suffix.lower() in USD_ASSET_EXTENSIONS:
             assets.append(path)
@@ -127,11 +131,12 @@ def _define_sun_light(stage: Usd.Stage) -> None:
     shadow.CreateShadowEnableAttr(True)
 
 
-def _define_sky_light(stage: Usd.Stage) -> None:
-    """Create a diffuse daytime sky light."""
+def _define_sky_light(stage: Usd.Stage, texture_path: str, intensity: float) -> None:
+    """Create a textured daytime sky dome light."""
     sky = UsdLux.DomeLight.Define(stage, "/World/Lights/Sky")
-    sky.CreateIntensityAttr(500.0)
-    sky.CreateColorAttr(Gf.Vec3f(0.75, 0.85, 1.0))
+    sky.CreateIntensityAttr(intensity)
+    sky.CreateTextureFileAttr(Sdf.AssetPath(texture_path))
+    sky.CreateTextureFormatAttr(UsdLux.Tokens.latlong)
 
 
 def generate_orchard(
@@ -140,6 +145,7 @@ def generate_orchard(
     *,
     tree_asset: Path = TREE_ASSET,
     ground_cover_asset: Path = GROUND_COVER_ASSET,
+    sky_texture_asset: Path = SKY_TEXTURE_ASSET,
 ) -> Path:
     """Generate an orchard USD layer and return its resolved output path."""
     config.validate()
@@ -149,7 +155,12 @@ def generate_orchard(
     tree_assets = discover_usd_assets(tree_asset)
     ground_cover_asset = ground_cover_asset.expanduser().resolve()
     if not ground_cover_asset.is_file():
-        raise FileNotFoundError(f"USD ground-cover asset not found: {ground_cover_asset}")
+        raise FileNotFoundError(
+            f"USD ground-cover asset not found: {ground_cover_asset}"
+        )
+    sky_texture_asset = sky_texture_asset.expanduser().resolve()
+    if not sky_texture_asset.is_file():
+        raise FileNotFoundError(f"sky texture asset not found: {sky_texture_asset}")
 
     stage = Usd.Stage.CreateNew(str(output_path))
     UsdGeom.SetStageUpAxis(stage, UsdGeom.Tokens.z)
@@ -160,7 +171,11 @@ def generate_orchard(
     UsdGeom.Scope.Define(stage, "/World/GroundCover")
     UsdGeom.Scope.Define(stage, "/World/Lights")
     _define_sun_light(stage)
-    _define_sky_light(stage)
+    _define_sky_light(
+        stage,
+        _reference_path(sky_texture_asset, output_path),
+        config.sky_intensity,
+    )
 
     max_tree_x = (config.n_rows - 1) * config.row_spacing
     max_tree_y = (config.n_cols - 1) * config.col_spacing

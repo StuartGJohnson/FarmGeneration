@@ -4,7 +4,9 @@ __pycache__/
 .pytest_cache/
 build/
 dist/
-assets/
+assets/BL04*
+assets/*.zip
+assets/ground_cover
 .idea
 codex_resume.txt
 agy_resume.txt
