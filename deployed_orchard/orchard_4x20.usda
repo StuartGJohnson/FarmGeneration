@@ -7,6 +7,12 @@
 
 def Xform "World"
 {
+    def PhysicsScene "PhysicsScene"
+    {
+        vector3f physics:gravityDirection = (0, 0, -1)
+        float physics:gravityMagnitude = 9.81
+    }
+
     def Scope "Trees"
     {
         def Xform "Tree_r000_c000" (

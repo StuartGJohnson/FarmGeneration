@@ -47,6 +47,14 @@ class GenerateOrchardTest(unittest.TestCase):
         self.assertTrue(stage)
         self.assertEqual(stage.GetDefaultPrim().GetPath().pathString, "/World")
         self.assertEqual(len(stage.GetPrimAtPath("/World/Trees").GetChildren()), 4)
+        physics_scene = UsdPhysics.Scene(stage.GetPrimAtPath("/World/PhysicsScene"))
+        self.assertTrue(physics_scene)
+        self.assertEqual(
+            tuple(physics_scene.GetGravityDirectionAttr().Get()), (0.0, 0.0, -1.0)
+        )
+        self.assertAlmostEqual(
+            physics_scene.GetGravityMagnitudeAttr().Get(), 9.81, places=5
+        )
         
         # Verify PointInstancer setup for weeds
         instancer = stage.GetPrimAtPath("/World/Weeds")
@@ -142,6 +150,14 @@ class GenerateOrchardTest(unittest.TestCase):
 
         stage = Usd.Stage.Open(str(GENERATED_TREE_TEST_OUTPUT), load=Usd.Stage.LoadNone)
         self.assertTrue(stage)
+        physics_scene = UsdPhysics.Scene(stage.GetPrimAtPath("/World/PhysicsScene"))
+        self.assertTrue(physics_scene)
+        self.assertEqual(
+            tuple(physics_scene.GetGravityDirectionAttr().Get()), (0.0, 0.0, -1.0)
+        )
+        self.assertAlmostEqual(
+            physics_scene.GetGravityMagnitudeAttr().Get(), 9.81, places=5
+        )
 
         trees = stage.GetPrimAtPath("/World/Trees").GetChildren()
         self.assertEqual(len(trees), 4)

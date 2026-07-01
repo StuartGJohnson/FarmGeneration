@@ -215,6 +215,13 @@ def _define_sky_light(stage: Usd.Stage, texture_path: str, intensity: float) -> 
     sky.CreateTextureFormatAttr(UsdLux.Tokens.latlong)
 
 
+def _define_physics_scene(stage: Usd.Stage) -> None:
+    """Create the scene-level physics settings used by Isaac Sim."""
+    physics_scene = UsdPhysics.Scene.Define(stage, "/World/PhysicsScene")
+    physics_scene.CreateGravityDirectionAttr(Gf.Vec3f(0.0, 0.0, -1.0))
+    physics_scene.CreateGravityMagnitudeAttr(9.81)
+
+
 def generate_orchard(
     config: OrchardConfig,
     output_path: Path,
@@ -239,6 +246,7 @@ def generate_orchard(
     UsdGeom.SetStageMetersPerUnit(stage, 1.0)
     world = UsdGeom.Xform.Define(stage, "/World")
     stage.SetDefaultPrim(world.GetPrim())
+    _define_physics_scene(stage)
     UsdGeom.Scope.Define(stage, "/World/Trees")
 
     # We define /World/Weeds as a PointInstancer prim
