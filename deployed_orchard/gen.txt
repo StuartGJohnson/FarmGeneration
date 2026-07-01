@@ -1,0 +1,1 @@
+generate-orchard --tree-source assets/pecan_trees --weed-source assets/weeds --sky-texture-source assets/dome_texture_clouds.png orchard_config.yaml orchard_4x20.usda

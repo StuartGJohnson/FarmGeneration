@@ -15,10 +15,12 @@ class OrchardConfig:
 
     n_rows: int = 2
     n_cols: int = 2
-    tree_scaling_min: float = 2.0
-    tree_scaling_max: float = 2.2
-    ground_cover_scaling_min: float = 1.0
-    ground_cover_scaling_max: float = 1.0
+    tree_scaling_min: float = 0.8
+    tree_scaling_max: float = 1.1
+    weed_density: float = 10.0
+    weed_scaling_min: float = 0.8
+    weed_scaling_max: float = 1.2
+    weed_row_concentration: float = 1.25
     ground_extent: float = 4.0
     row_spacing: float = 5.0
     col_spacing: float = 4.0
@@ -29,16 +31,18 @@ class OrchardConfig:
         """Raise ValueError when a setting cannot produce a valid orchard."""
         if self.n_rows < 1 or self.n_cols < 1:
             raise ValueError("n_rows and n_cols must be at least 1")
-        if self.tree_scaling_min <= 0 or self.ground_cover_scaling_min <= 0:
+        if self.tree_scaling_min <= 0 or self.weed_scaling_min <= 0:
             raise ValueError("minimum scaling values must be greater than 0")
         if self.tree_scaling_min > self.tree_scaling_max:
             raise ValueError("tree_scaling_min must not exceed tree_scaling_max")
-        if self.ground_cover_scaling_min > self.ground_cover_scaling_max:
-            raise ValueError(
-                "ground_cover_scaling_min must not exceed ground_cover_scaling_max"
-            )
+        if self.weed_scaling_min > self.weed_scaling_max:
+            raise ValueError("weed_scaling_min must not exceed weed_scaling_max")
+        if self.weed_row_concentration <= 0:
+            raise ValueError("weed_row_concentration must be greater than 0")
         if self.ground_extent < 0:
             raise ValueError("ground_extent must be non-negative")
+        if self.weed_density < 0:
+            raise ValueError("weed_density must be non-negative")
         if self.row_spacing <= 0 or self.col_spacing <= 0:
             raise ValueError("row_spacing and col_spacing must be greater than 0")
         if self.sky_intensity < 0:

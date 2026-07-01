@@ -1,0 +1,20 @@
+Generate a large ground mesh with collider and UVs, then create a tileable procedural dirt albedo texture PNG and bind it to the ground material.
+
+Requirements:
+- One ground mesh, no repeated dirt tiles.
+- Ground mesh has UV coordinates.
+- Material uses UsdPreviewSurface or MDL with:
+  - diffuse/base color from texture
+  - roughness 0.9–1.0
+  - metallic 0
+  - very low specular
+- Generate a tileable 1024x1024 or 2048x2048 dirt texture using layered noise:
+  - base tan/brown soil color
+  - low-frequency large blotches
+  - medium-frequency sandy variation
+  - sparse darker flecks/pebbles
+  - subtle dry straw/gray patches
+- Texture should tile over world space, e.g. repeat every 4 meters.
+- Avoid strong high-contrast patterns.
+- No displacement at first.
+- Optional: generate matching normal map later.

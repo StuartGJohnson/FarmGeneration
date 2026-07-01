@@ -1,0 +1,13 @@
+n_rows: 4 
+n_cols: 20 
+tree_scaling_min: 0.8
+tree_scaling_max: 1.1
+weed_density: 10.0
+weed_scaling_min: 0.8
+weed_scaling_max: 1.2
+weed_row_concentration: 1.25
+ground_extent: 10.0
+row_spacing: 7.0
+col_spacing: 5.0
+random_seed: 0
+sky_intensity: 500.0

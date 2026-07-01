@@ -3,9 +3,7 @@
 Code herein generates a configurable pecan orchard as a USD(A) (Pixar's Unified Scene Description) world for robotics simulation (via NVIDIA IsaacSim). The generated USD(A) uses asset references to existing tree and ground-cover assets rather than copying their geometry. Repeated vegetation references are
 marked instanceable so renderers can share their large source geometry.
 
-The orchard is Z-up and uses meters. Trees are arranged in rows, ground-cover
-patches tile the area around them, and an invisible static collision plane spans
-the requested ground extent. A high-angle distant sun provides directional
+The orchard is Z-up and uses meters. Trees are arranged in rows, weeds are randomly arranged along tree rows, and a textured static collision ground plane spans the requested ground extent. A high-angle distant sun provides directional
 lighting and shadows, while a dome light provides diffuse daytime sky fill.
 Environment lights embedded in referenced assets are removed before use (see the assets section below).
 
@@ -38,8 +36,8 @@ Generate an orchard using tree assets discovered from a directory:
 ```bash
 source env.sh
 generate-orchard \
-  --tree-source test_output/pecan_trees \
-  --ground-cover-source assets/ground_cover/meadowPatch_poppy.usda \
+  --tree-source assets/pecan_trees \
+  --weed-source assets/weeds \
   --sky-texture-source assets/dome_texture_no_clouds.png \
   orchard_config.yaml \
   test_output/orchard_generated_trees_world.usda
@@ -51,7 +49,7 @@ recursively for `.usd`, `.usda`, and `.usdc` files, excluding hidden directories
 and common scratch directories such as `temp` and `tmp`. When multiple tree
 assets are found, each tree placement randomly chooses one source asset while
 remaining instanceable.
-`--ground-cover-source` may point to a single USD ground-cover file.
+`--weed-source` may point to a single USD weed file or to a directory. See above for tree source.
 `--sky-texture-source` may point to an image file used as a latlong dome light
 texture for daytime sky illumination.
 
@@ -59,19 +57,19 @@ The supported parameters and authoritative defaults are defined by
 [`OrchardConfig`](src/orchard_generator/config.py). `orchard_config.yaml`
 provides an example configuration.
 
-| Parameter | Default | Description |
-| --- | ---: | --- |
-| `n_rows` | `2` | Number of tree rows. Rows are spaced along the X axis. |
-| `n_cols` | `2` | Number of trees in each row. Columns are spaced along the Y axis. |
-| `tree_scaling_min` | `2.0` | Minimum uniform random scale applied to each tree. |
-| `tree_scaling_max` | `2.2` | Maximum uniform random scale applied to each tree. |
-| `ground_cover_scaling_min` | `1.0` | Minimum uniform random scale applied to each ground-cover patch. |
-| `ground_cover_scaling_max` | `1.0` | Maximum uniform random scale applied to each ground-cover patch. |
-| `ground_extent` | `4.0` | Ground-cover and collision-plane extent, in meters, beyond the outermost tree positions. |
-| `row_spacing` | `5.0` | Distance between tree rows, in meters. |
-| `col_spacing` | `4.0` | Distance between trees within each row, in meters. |
-| `sky_intensity` | `500.0` | Intensity authored on the sky dome light. |
-| `random_seed` | `null` | Optional random seed for repeatable scales and rotations. Omit it or use `null` for different transforms each run. |
+| Parameter          | Default | Description                                                                                                        |
+|--------------------| ---: |--------------------------------------------------------------------------------------------------------------------|
+| `n_rows`           | `2` | Number of tree rows. Rows are spaced along the X axis.                                                             |
+| `n_cols`           | `2` | Number of trees in each row. Columns are spaced along the Y axis.                                                  |
+| `tree_scaling_min` | `2.0` | Minimum uniform random scale applied to each tree.                                                                 |
+| `tree_scaling_max` | `2.2` | Maximum uniform random scale applied to each tree.                                                                 |
+| `weed_scaling_min` | `1.0` | Minimum uniform random scale applied to each weed.                                                                 |
+| `weed_scaling_max` | `1.0` | Maximum uniform random scale applied to each weed.                                                                 |
+| `ground_extent`    | `4.0` | Ground-cover and collision-plane extent, in meters, beyond the outermost tree positions.                           |
+| `row_spacing`      | `5.0` | Distance between tree rows, in meters.                                                                             |
+| `col_spacing`      | `4.0` | Distance between trees within each row, in meters.                                                                 |
+| `sky_intensity`    | `500.0` | Intensity authored on the sky dome light.                                                                          |
+| `random_seed`      | `null` | Optional random seed for repeatable scales and rotations. Omit it or use `null` for different transforms each run. |
 
 Tree rotations are selected randomly about the Z axis. Ground-cover rotations
 are selected randomly in 90-degree increments. Minimum scaling values must be
@@ -81,6 +79,11 @@ minimums, and spacing values must be greater than zero.
 The output stores references relative to its own location. Keep the
 `assets` directory and its texture subdirectories available at those relative
 paths when moving or packaging the generated output.
+
+The ground-plane texture is generated by `tests/test_generate_ground.py` at
+`assets/ground_plane.png`. The orchard ground mesh uses UVs that repeat this
+texture every 4 meters and expands the mesh extents outward to complete 4 m
+tiles.
 
 ## Tests
 
