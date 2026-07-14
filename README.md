@@ -1,7 +1,11 @@
 # Farm Generation
 
-Code herein generates a configurable pecan orchard as a USD(A) (Pixar's Unified Scene Description) world for robotics simulation (via NVIDIA IsaacSim). The generated USD(A) uses asset references to existing tree and ground-cover assets rather than copying their geometry. Repeated vegetation references are
-marked instanceable so renderers can share their large source geometry.
+This repo contains code to:
+
+- generate an orchard from existing tree and ground cover/weed assets
+- generate (pecan) tree and ground cover/weed assets from scratch
+
+These generation steps produce USD(A) (Pixar's Unified Scene Description) assets (or world in the case of the orchard) for robotics simulation via NVIDIA IsaacSim. The generated world USD(A) uses asset references to existing tree and ground-cover assets rather than copying their geometry. Repeated vegetation references are marked instanceable for simulation efficiency in IsaacSim.
 
 The orchard is Z-up and uses meters. Trees are arranged in rows, weeds are randomly arranged along tree rows, and a textured static collision ground plane spans the requested ground extent. A high-angle distant sun provides directional
 lighting and shadows, while a dome light provides diffuse daytime sky fill.
